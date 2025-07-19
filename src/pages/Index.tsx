@@ -56,13 +56,13 @@ const Index = () => {
       {/* Header */}
       <div className="p-4 bg-black/20 backdrop-blur-sm">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl text-white drop-shadow-lg">PIXEL CLICKER</h1>
+          <h1 className="text-2xl text-white drop-shadow-lg">ПИКСЕЛЬ КЛИКЕР</h1>
           <div className="flex gap-4 items-center">
             <Badge variant="secondary" className="text-lg px-3 py-1 bg-white/90">
               💰 {score.toLocaleString()}
             </Badge>
             <Badge variant="outline" className="text-sm px-2 py-1 bg-white/80">
-              🤖 {autoClickers} auto
+              🤖 {autoClickers} авто
             </Badge>
           </div>
         </div>
@@ -76,7 +76,7 @@ const Index = () => {
             <h2 className="text-4xl text-white drop-shadow-lg mb-2">
               {score.toLocaleString()}
             </h2>
-            <p className="text-white/80 text-sm">POINTS</p>
+            <p className="text-white/80 text-sm">ОЧКИ</p>
           </div>
           
           <Button
@@ -92,14 +92,14 @@ const Index = () => {
           >
             <div className="flex flex-col items-center gap-2">
               <div className="text-6xl">🎯</div>
-              <div className="text-sm">CLICK</div>
+              <div className="text-sm">КЛИК</div>
             </div>
           </Button>
           
           <div className="mt-4 text-center">
-            <p className="text-white/80 text-xs">+{clickValue} per click</p>
+            <p className="text-white/80 text-xs">+{clickValue} за клик</p>
             {autoClickers > 0 && (
-              <p className="text-cyan-200 text-xs">+{autoClickValue}/sec auto</p>
+              <p className="text-cyan-200 text-xs">+{autoClickValue}/сек авто</p>
             )}
           </div>
         </div>
@@ -109,7 +109,7 @@ const Index = () => {
           <Card className="p-4 bg-black/80 border-2 border-white/20 backdrop-blur-sm">
             <h3 className="text-white text-lg mb-4 flex items-center gap-2">
               <Icon name="ShoppingCart" size={20} />
-              SHOP
+              МАГАЗИН
             </h3>
             
             {/* Auto Clicker Upgrade */}
@@ -117,8 +117,8 @@ const Index = () => {
               <Card className="p-3 bg-white/10 border border-cyan-400/50">
                 <div className="flex justify-between items-center mb-2">
                   <div>
-                    <div className="text-cyan-300 text-sm">🤖 AUTO CLICKER</div>
-                    <div className="text-white/60 text-xs">+1/sec passive</div>
+                    <div className="text-cyan-300 text-sm">🤖 АВТО КЛИКЕР</div>
+                    <div className="text-white/60 text-xs">+1/сек пассивно</div>
                   </div>
                   <Badge className="bg-orange-500 text-white text-xs">
                     {autoClickerCost}
@@ -129,7 +129,7 @@ const Index = () => {
                   disabled={score < autoClickerCost}
                   className="w-full bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-500 text-xs"
                 >
-                  BUY ({autoClickers} owned)
+                  КУПИТЬ ({autoClickers} шт.)
                 </Button>
               </Card>
 
@@ -137,8 +137,8 @@ const Index = () => {
               <Card className="p-3 bg-white/10 border border-orange-400/50">
                 <div className="flex justify-between items-center mb-2">
                   <div>
-                    <div className="text-orange-300 text-sm">⚡ POWER UP</div>
-                    <div className="text-white/60 text-xs">+1 per click</div>
+                    <div className="text-orange-300 text-sm">⚡ УСИЛЕНИЕ</div>
+                    <div className="text-white/60 text-xs">+1 за клик</div>
                   </div>
                   <Badge className="bg-orange-500 text-white text-xs">
                     {clickUpgradeCost}
@@ -149,7 +149,7 @@ const Index = () => {
                   disabled={score < clickUpgradeCost}
                   className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-500 text-xs"
                 >
-                  BUY (Level {clickValue})
+                  КУПИТЬ (Ур. {clickValue})
                 </Button>
               </Card>
             </div>
@@ -159,23 +159,23 @@ const Index = () => {
           <Card className="p-4 bg-black/80 border-2 border-white/20 backdrop-blur-sm">
             <h3 className="text-white text-lg mb-4 flex items-center gap-2">
               <Icon name="BarChart3" size={20} />
-              STATS
+              СТАТИСТИКА
             </h3>
             <div className="space-y-2 text-xs">
               <div className="flex justify-between text-white/80">
-                <span>Total Score:</span>
+                <span>Всего очков:</span>
                 <span>{score.toLocaleString()}</span>
               </div>
               <div className="flex justify-between text-white/80">
-                <span>Click Power:</span>
+                <span>Сила клика:</span>
                 <span>{clickValue}</span>
               </div>
               <div className="flex justify-between text-white/80">
-                <span>Auto Clickers:</span>
+                <span>Авто кликеры:</span>
                 <span>{autoClickers}</span>
               </div>
               <div className="flex justify-between text-white/80">
-                <span>Income/sec:</span>
+                <span>Доход/сек:</span>
                 <span>{autoClickValue}</span>
               </div>
             </div>
@@ -185,17 +185,17 @@ const Index = () => {
           <Card className="p-4 bg-black/80 border-2 border-white/20 backdrop-blur-sm">
             <h3 className="text-white text-lg mb-4 flex items-center gap-2">
               <Icon name="Trophy" size={20} />
-              ACHIEVEMENTS
+              ДОСТИЖЕНИЯ
             </h3>
             <div className="space-y-2">
               <div className={`p-2 rounded border ${score >= 100 ? 'bg-yellow-500/20 border-yellow-500' : 'bg-gray-500/20 border-gray-500'}`}>
-                <div className="text-xs text-white/80">🏆 First Hundred</div>
-                <div className="text-xs text-white/60">Reach 100 points</div>
+                <div className="text-xs text-white/80">🏆 Первая сотня</div>
+                <div className="text-xs text-white/60">Набрать 100 очков</div>
                 <Progress value={Math.min(100, (score / 100) * 100)} className="h-1 mt-1" />
               </div>
               <div className={`p-2 rounded border ${autoClickers >= 5 ? 'bg-yellow-500/20 border-yellow-500' : 'bg-gray-500/20 border-gray-500'}`}>
-                <div className="text-xs text-white/80">🤖 Robot Army</div>
-                <div className="text-xs text-white/60">Own 5 auto clickers</div>
+                <div className="text-xs text-white/80">🤖 Армия роботов</div>
+                <div className="text-xs text-white/60">Купить 5 авто кликеров</div>
                 <Progress value={Math.min(100, (autoClickers / 5) * 100)} className="h-1 mt-1" />
               </div>
             </div>
